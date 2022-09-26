@@ -1,18 +1,13 @@
 import React, { Component } from "react";
 import Header from './components/Header';
-import Footer from './components/Footer';
-import Input from './components/Input';
-import Cv from './components/Cv';
+import Main from "./components/Main";
 
 class App extends Component {
   render() {
-    return <div>
+    return <>
       <Header></Header>
-      <Input></Input>
-      <Cv></Cv>
-      <Footer></Footer>
-
-    </div>
+      <Main></Main>
+    </>
   }
 }
 

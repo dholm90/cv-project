@@ -1,3 +1,11 @@
+:root {
+  --primary: hsla(120, 100%, 50%);
+  --light: hsla(120, 100%, 75%, 0.3);
+  --dark: hsl(120, 100%, 25%);
+  --white: hsla(120, 100%, 95%, 1);
+  --black: hsla(120, 100%, 5%, 0.8);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +18,217 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+body,
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: var(--white);
+
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#pageHeader {
+  display: flex;
+  justify-content: flex-start;
+  height: 10vh;
+  align-items: center;
+  padding-left: 2rem;
+  background-color: var(--primary);
+}
+
+
+main {
+  display: flex;
+
+}
+
+#input {
+  background-color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 30%;
+  padding: 2rem;
+  height: 85vh;
+  overflow-y: scroll;
+  color: var(--white)
+}
+
+input,
+textarea {
+  padding: 0.5rem;
+  font-weight: 600;
+  font-size: large;
+  color: var(--black);
+  border-radius: 0.5rem;
+  border: 0;
+}
+
+form,
+.experience,
+.education {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputHeader {
+  font-size: 1.75rem;
+}
+
+button {
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: 0;
+  margin-top: 1rem;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.inputExp,
+.inputEdu,
+.inputEduList,
+.inputExpList {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  font-weight: 500;
+  gap: 1rem;
+}
+
+.inputExpList,
+.inputEduList {
+  background-color: var(--white);
+  color: var(--dark);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.list button {
+  background-color: red;
+  color: var(--white);
+}
+
+/* **************** OUTPUT *************** */
+#output {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  height: 98%;
+  aspect-ratio: 8 / 11;
+  background-color: white;
+}
+
+.cvHeader {
+  background: var(--dark);
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 1rem;
+
+
+}
+
+.cvHeader #left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+}
+
+.cvHeader #right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: right;
+}
+
+.cvDescription {
+  padding: 1rem;
+}
+
+.experienceList {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1.5rem;
+}
+
+.cvExperience {
+  display: grid;
+  grid-template-areas: "t ys ye . . . . ."
+    "c . . . . . . .";
+  gap: 0.5rem;
+}
+
+.cvExpTitle {
+  grid-area: t;
+}
+
+.cvExpCompany {
+  grid-area: c;
+}
+
+.cvExpYearStart {
+  grid-area: ys;
+}
+
+.cvExpYearEnd {
+  grid-area: ye;
+}
+
+.educationList {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1.5rem;
+}
+
+.cvEducation {
+  display: grid;
+  grid-template-areas: "p ys ye . . . . ."
+    "s . . . . . . .";
+  gap: 0.5rem;
+}
+
+.cvEduSchool {
+  grid-area: s;
+}
+
+.cvEduProgram {
+  grid-area: p;
+}
+
+.cvEduYearStart {
+  grid-area: ys;
+}
+
+.cvEduYearEnd {
+  grid-area: ye;
 }

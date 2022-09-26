@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 class Header extends Component {
   render() {
     return (
-      <div><h1>CV Maker</h1></div>
+      <header id='pageHeader'>
+        <h1>Resumé Maker</h1>
+      </header>
     )
   }
 }
